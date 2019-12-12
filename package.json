@@ -4,13 +4,16 @@
   "scripts": {
     "build": "gridsome build",
     "develop": "gridsome develop",
-    "explore": "gridsome explore"
+    "explore": "gridsome explore",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@contentful/rich-text-html-renderer": "^13.4.0",
     "@gridsome/source-contentful": "^0.5.1",
     "gh-pages": "^2.1.1",
     "gridsome": "^0.7.0",
-    "markdown-it": "^10.0.0"
+    "markdown-it": "^10.0.0",
+    "serialize-javascript": ">=2.1.1"
   }
 }
