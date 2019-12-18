@@ -2,9 +2,9 @@ module.exports = {
   templates: {
     // Add templates for content types here.
     // Read more: https://gridsome.org/docs/templates/
-  },
-  siteUrl: 'https://rubenmarcus.github.io',
-  pathPrefix: '/new-portfolio',
+  },  
+  siteName: 'Ruben Marcus',
+  siteUrl: 'https://rubenmarcus.dev',
   plugins: [
     {
       use: '@gridsome/source-contentful',
