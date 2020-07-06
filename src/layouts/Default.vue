@@ -11,7 +11,7 @@
       <div class="about">
         <p>
           Olá meu nome é Ruben Marcus, sou um desenvolvedor Full Stack focado em
-          Front-end que trabalho atualmente na
+          Front-end  e trabalho atualmente na
           <a href="https://www.zup.com.br"> ZUP</a>
         </p>
       </div>
@@ -30,7 +30,7 @@ body {
   line-height: 1.5;
   height: 100vh;
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#00b7ea+0,009ec3+100;Blue+3D+%2315 */
-  background: #001c69; /* Old browsers */
+    background: #252525;/* Old browsers */
 }
 .mid-width {
   width: 47%;
@@ -93,7 +93,7 @@ nav h1 {
 }
 header{
   padding-top: 24px!important;
-     background: #021a50;
+   background: #191919;
 }
 .align-top{
      align-self: flex-start;
