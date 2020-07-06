@@ -1,11 +1,34 @@
 <template>
   <Layout>
-    <g-image alt="Example image" src="~/favicon.png" width="135" />
-    <h1>Hello, world!</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores</p>
+    <div class="container">
+    <div class=" flex">
+     <Links />
+    <Skills />
+    </div>
+  
+  <div class=" flex">
+   <BlogPosts />
+   <StackOverflow />
+    </div>
+    </div>
   </Layout>
 </template>
 
 <script>
-export default {}
+import axios from "axios";
+import Skills from '~/components/Skills.vue'
+import Links from '~/components/Links.vue'
+import BlogPosts from '~/components/Blog.vue'
+import StackOverflow from '~/components/StackOverflow.vue'
+
+
+export default {
+   components: {
+    Skills,
+    Links,
+    BlogPosts,
+    StackOverflow
+  },
+
+};
 </script>
