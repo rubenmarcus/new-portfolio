@@ -28,7 +28,10 @@ export default {
     Links,
     BlogPosts,
     StackOverflow
-  },
+  }, metaInfo: {
+    title: 'FullStack Engineer',
+   
+  }
 
 };
 </script>
