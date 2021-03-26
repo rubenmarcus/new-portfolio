@@ -15,7 +15,9 @@
             <a href>contact</a>
           </nav>
         </div>
+         
   <button ref="themeswitcher" class="icon-light" id="theme-switcher" @click="toggleTheme"></button>
+   
     </div>
 
     </header>
@@ -182,27 +184,29 @@
 </style>
 
 <script>
- document.documentElement.classList.add('dark')
+ let themeClass;
  let theme;
 export default {
-
+ metaInfo: {
+    bodyAttrs: {
+      class: 'dark'
+    },
+    },
   methods: {
     toggleTheme () {
       const newTheme = theme === 'light' ? 'dark' : 'light'
       this.setTheme(newTheme)
     },
+     
 
     setDark() {
-         document.documentElement.classList.remove('light')
+          this.bodyAttrs.class = 'dark';
           this.$refs.themeswitcher.classList.add('icon-light')
           this.$refs.themeswitcher.classList.remove('icon-dark')
-          document.documentElement.classList.add('dark')
       },
 
       setLight() {
-        
-         document.documentElement.classList.remove('dark')
-          document.documentElement.classList.add('light')
+         this.bodyAttrs.class = 'light';
           this.$refs.themeswitcher.classList.add('icon-dark')
           this.$refs.themeswitcher.classList.remove('icon-light')
         
