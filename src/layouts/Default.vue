@@ -1,6 +1,6 @@
 <template>
-
-  <div>
+<div :class="theme">
+  <div > 
     <header>
       <div class="container justify-left">
         <div class="d-flex justify-right">
@@ -16,8 +16,8 @@
           </nav>
         </div>
          
-  <button ref="themeswitcher" class="icon-light" id="theme-switcher" @click="toggleTheme"></button>
-   
+               <theme-switcher :theme="theme" @themeChanged="updateTheme" />
+
     </div>
 
     </header>
@@ -177,6 +177,7 @@
 
     </footer>
   </div>
+     </div>
 </template>
 
 <style>
@@ -184,18 +185,30 @@
 </style>
 
 <script>
+import ThemeSwitcher from '../components/ThemeSwitcher'
+
  let themeClass;
  let theme;
 export default {
- metaInfo: {
-    bodyAttrs: {
-      class: 'dark'
-    },
-    },
+ components: {
+    ThemeSwitcher
+  },
+  mounted() {
+    this.theme = localStorage.getItem('theme') || 'theme-light'
+  },
+    data() {
+    return {
+      theme: '',
+    }
+  },
   methods: {
     toggleTheme () {
       const newTheme = theme === 'light' ? 'dark' : 'light'
       this.setTheme(newTheme)
+    },
+
+     updateTheme(theme) {
+      this.theme = theme
     },
      
 

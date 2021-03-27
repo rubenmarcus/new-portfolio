@@ -1,18 +1,18 @@
 <template>
     
-    <div class="text-right align-top mt-80 blog-posts">
+    <section class="align-top mt-80 blog-posts">
   <h1>
       Blog Posts
     </h1>
     <ul class="d-flex flex-wrap">
-      <li v-for="post in posts" :key="post.title">
+      <li v-for="post in posts" class="text-center" :key="post.title">
         <a :href="post.link"> 
           <img width="240" :src="post.thumbnail" />
           
           <span>{{ post.title }}</span> </a>
       </li>
     </ul>
-    </div>
+    </section>
 </template>
 
 <script>

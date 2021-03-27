@@ -5,11 +5,9 @@
         <div class="d-flex">
           <div class="picture-info">
                   <img
-            src="../img/999.jpg"
-            width="250"
-             height="250"
-            style="    border-right: 2px solid rgb(86, 245, 201);
-    border-bottom: 2px solid rgb(86, 245, 201);"
+            src="../img/me.jpg"
+           
+         
           />
             
             <p> me 13 year old</p>

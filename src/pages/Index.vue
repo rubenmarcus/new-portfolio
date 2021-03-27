@@ -5,11 +5,11 @@
         <div class="container">
             Hello, I am a   <br />
          <span class="link-highlight">Software Engineer /  Front-end Specialist</span>
-            <br /><span style="font-size:40px;">from São Paulo, Brazil.</span>
+            <br /><span>from São Paulo, Brazil.</span>
             <br />
         </div>
 </div>
-    <div class="stats mt-80 justify-right text-right">
+    <div class="stats  justify-right text-right">
       <div class="container">
         <div class="d-flex flex-wrap">
           <p>
@@ -96,7 +96,6 @@ import StackOverflow from '~/components/StackOverflow.vue'
 
 var randomColor = "#"+((1<<24)*Math.random()|0).toString(16); 
 
-document.documentElement.style.setProperty('primary', randomColor);
 export default {
    components: {
     Skills,
@@ -104,7 +103,7 @@ export default {
     BlogPosts,
     StackOverflow
   }, metaInfo: {
-    title: 'FullStack Engineer',
+    title: 'rubenmarcus.dev',
    
   }
 

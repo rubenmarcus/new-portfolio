@@ -1,7 +1,10 @@
 
 :root {
-    --primary-dark:#56f5c9;
+    --primary-dark:#ccc;
     --white: #ffffff;
+    --container-one: #272727;
+    --second-container: #fdfdfd;
+    --text-highlight:#eee;
 }
 .about {
     margin: 102px 0px;
@@ -54,6 +57,8 @@
     display: block;
     margin-left: auto;
 }
+
+
 .about-me {
     height: auto;
     background: #222;
@@ -105,7 +110,7 @@ nav a {
     width: 340px;
 }
 .stats{
-    background: #101010;
+    background: var(--second-container);
     padding: 40px 0px;
 }
 .stats a{
@@ -225,9 +230,33 @@ header button {
     left: 62%;
     top: 25px;
 }
-.light body{
-    background: #f4f4f4;
+.theme-light{
+    background: #fff;
+
+          --primary: #fff;
+        --primary-dark: #00a8ff;
+          --container-one: #e4e4e4;
+          --second-container: #f6f6f6;
+              border-top: solid var(--primary-dark);
 }
+
+.theme-switcher {
+    position: absolute;
+    top: 23px;
+    right: 17px;
+
+}
+.theme-dark {
+        background: #272727;
+        border-top: solid var(--primary-dark);
+          --primary-dark: #00d4ca;
+          --container-one: #333;
+            --second-container: #131313;
+    --text-highlight:#1d1d1d;
+}
+
+ .theme-switcher svg{color:var(--primary-dark); }
+
 button{border:0px; cursor:pointer;     outline: none;}
 button:focus{border:0px;}
 .icon-light{background: url(./img/sun.svg); width:25px; height:25px; border:0px;}
@@ -242,7 +271,7 @@ button:focus{border:0px;}
     color: #999;
     font-size: 23px;
     font-weight: 100;
-    background: #272727;
+    background: var(--primary);
     margin: 0px;
     padding: 24px;
 }
@@ -283,10 +312,15 @@ nav h1 {
       line-height: 0px;
 }
 header{
-    padding-top: 24px!important;
+    padding: 16px 0px;
 }
 .align-top{
        align-self: flex-start;
+}
+
+header nav{
+        position: relative;
+    top: 5px;
 }
 h1 svg {
       width: 35px!important;
@@ -326,7 +360,7 @@ h1 svg {
 }
 h1 {
       font-size: 18px;
-      background: #555;
+      background:var(--text-highlight);
       color: var(--primary-dark);
       padding: 0px 10px;
       display:inline-block
@@ -337,8 +371,8 @@ h1 {
 
 li {
     color: #fff;
-    font-size: 23px;
-    line-height: 43px;
+    font-size: 14px;
+    line-height: 29px;
 }
 .container {
     max-width: 1024px;
@@ -386,9 +420,9 @@ footer svg:hover {
 .about span.link-highlight {
     line-height: 44px!important;
     display: inline-block;
-    background: #292929;
-    width: 610px;
-    font-size: 2.4rem;
+    background: var(--text-highlight);
+    width: 480px;
+    font-size: 2rem;
 }
 .about span.link-highlight:hover{
     animation: hue 2s infinite ease-in-out;
@@ -414,10 +448,10 @@ footer svg:hover {
 
 
   @keyframes  hue{
-    0%  {  background: #555;   -webkit-filter: hue-rotate(0deg);}
-    30%{  background: #555; -webkit-filter: hue-rotate(-80deg);}
-    50%{  background: #333; -webkit-filter: hue-rotate(-120deg);}
-    70%{  background: #333; -webkit-filter: hue-rotate(-240deg);}
-    100% { background: #555; -webkit-filter: hue-rotate(-360deg); }
+    0%  {  background: #ddd;  -webkit-filter: hue-rotate(0deg);}
+    30%{   background: #fff;  -webkit-filter: hue-rotate(-80deg);}
+    50%{  background: #ddd;  -webkit-filter: hue-rotate(-120deg);}
+    70%{   background: #fff;  -webkit-filter: hue-rotate(-240deg);}
+    100% {  background: #ddd;  -webkit-filter: hue-rotate(-360deg); }
 
   }

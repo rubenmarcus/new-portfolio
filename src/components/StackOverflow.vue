@@ -1,6 +1,6 @@
 <template>
     
-    <div class="text-right align-top mt-80">
+    <section class="align-top mt-80">
   <h1>
      Respostas no StackOverflow
     </h1>
@@ -9,7 +9,7 @@
         <a :href="post.link"> {{ post.title }} </a>
       </li>
     </ul>
-    </div>
+    </section>
 </template>
 
 <script>
