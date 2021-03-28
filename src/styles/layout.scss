@@ -1,0 +1,21 @@
+footer{
+    background:var(--primary-dark);
+    height:auto;
+    width:100%;
+}
+
+    footer svg{
+    fill: #000
+}
+footer svg:hover {
+    fill: #fff;
+    
+}
+
+.about img{
+    position: absolute;
+    right: 219px;
+    top: 91px;
+    border-radius: 5px;
+    width: 170px;
+}

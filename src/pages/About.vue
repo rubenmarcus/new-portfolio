@@ -4,11 +4,7 @@
       <div class="mt-80">
         <div class="d-flex">
           <div class="picture-info">
-                  <img
-            src="../img/me.jpg"
-           
-         
-          />
+            
             
             <p> me 13 year old</p>
              <p> pentium 3</p>

@@ -1,0 +1,465 @@
+@import 'fonts.scss';
+@import 'animation.scss';
+@import 'themes/dark.scss';
+@import 'themes/light.scss';
+@import 'layout.scss';
+
+
+
+
+:root {
+    --primary-dark:#ccc;
+    --white: #ffffff;
+    --container-one: #272727;
+    --second-container: #fdfdfd;
+    --text-highlight:#eee;
+}
+.about {
+    margin: 102px 0px;
+}
+
+
+.d-flex{
+    display: flex;
+}
+
+.blog-posts li {
+    width: 303px;
+    margin: 10px 10px;
+}
+
+.blog-posts span {
+    display: inline-block;
+}
+
+.blog-posts a {
+    display: block;
+    font-size: 1rem;
+    line-height: 1.6rem;
+}
+
+.link-highlight{
+      color: var(--primary-dark);
+      padding-left: 10px;
+      padding-right: 10px;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.number-size {
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: block;
+    padding-bottom: 19px;
+    padding-top: 0px;
+    color: var(--primary-dark);
+}
+.resume p{
+    font-family: 'Noto Sans JP', sans-serif!important;
+    font-size: 20px;
+    line-height: 27px;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    max-width: 600px;
+    display: block;
+    margin-left: auto;
+}
+
+
+.about-me {
+    height: auto;
+    background: #222;
+    color: var(--primary-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Noto Sans JP', sans-serif!important;
+    font-size: 20px;
+    text-align: left;
+    line-height: 42px;
+}
+.tech-skills {
+    background: #0c0c0c;
+}
+.picture-info p {
+    color: rgb(153, 153, 153);
+    font-size: 11px;
+    line-height: 9px;
+}
+.p-80{
+    padding:80px 0px;
+}
+.icons{
+    width: 80%;
+    margin: 0 auto;
+}
+.noto{font-family: 'Noto Sans JP', sans-serif!important;}
+nav a {
+      margin-right: 27px;
+      margin-top: 10px;
+
+}
+.justify-right{
+        justify-content: space-between;
+}
+.mt-80{
+    margin:80px 0px;
+}
+.copyleft{
+    display:inline-block;
+    transform: rotate(180deg);
+}
+.site {
+    padding-top: 20px;
+    font-weight: 600;
+    margin-right: 3px;
+    font-size: 20px;
+    width: 340px;
+}
+.stats{
+    background: var(--second-container);
+    padding: 40px 0px;
+}
+.stats a{
+    margin-top: 6px;
+    display: inline-block;
+    width: auto;
+}
+
+.stats a:hover, nav a:hover{
+    -webkit-animation: hue 2s infinite ease-in-out;
+    animation: hue 2s infinite ease-in-out;
+}
+.stats p {
+    font-size: .9rem;
+    font-family: 'Noto Sans JP';
+    line-height: 20px;
+    text-align: center;
+    width: calc(100%/5 - 40px);
+    padding: 20px;
+    color: #999;
+}
+.stats p:last-child{
+    padding-right:0px;
+}
+li{
+    list-style: none;
+}
+.logo{
+      color: #000;
+      display: inline-block;
+      font-size: 23px;
+      font-family: 'Rubik';
+      font-weight: 600;
+      position: absolute;
+      top: 73px;
+      letter-spacing: -1px;
+}
+.logo-wrapper, li a{
+    transition: all .4s cubic-bezier(0.2, 0.6, 0.2, 1);
+    animation-fill-mode: backwards;
+}
+.logo-wrapper::after {
+    color: var(--primary-dark);
+    content: 'rubenmarcus';
+    font-size: 34px;
+}
+.logo-wrapper:hover{
+    background: #555;
+    margin-left: 40px;
+    -webkit-animation: hue 2s infinite ease-in-out;
+    animation: hue 2s infinite ease-in-out;
+}
+li a{
+
+    color:#999;
+    position:relative;
+}
+li a:hover{
+    margin-right: 20px;
+    color:var(--primary-dark);
+    -webkit-animation: hue 2s infinite ease-in-out;
+    animation: hue 2s infinite ease-in-out;
+}
+.logo-wrapper:hover:before{
+margin-left: -20px;
+animation: square-to-circle .5s 1 ease-in;
+animation-fill-mode: forwards;
+}
+.logo-wrapper:hover:before, li a:hover:before {
+    background: var(--primary-dark);
+    width: 14px;
+    height: 14px;
+    content: '';
+    display: block;
+    position: absolute;
+    /* left: -1px; */
+    margin-top: 11px;
+}
+li a:hover:before {
+    margin-top: 14px;
+    margin-left: -22px;
+    left: 0px;
+  
+    animation: square-to-circle .5s 1 ease-in;
+    animation-fill-mode: forwards
+}
+.logo-wrapper:hover::after{
+    content: 'rubenmarcus.dev';
+}
+
+body{
+    font-family: 'Rubik';
+  margin: 0;
+  font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  padding: 0;
+  line-height: 1.5;
+  height: 100%;
+}
+.dark body {
+    background:#151515;
+    border-top:solid  var(--primary-dark) 4px;
+}
+.mid-width {
+    width: 47%;
+}
+.full-width {
+    width: 100%;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+   
+}
+header button {
+    position: absolute;
+    left: 62%;
+    top: 25px;
+}
+.theme-light{
+    background: #fff;
+
+          --primary: #fff;
+        --primary-dark: #00a8ff;
+          --container-one: #e4e4e4;
+          --second-container: #f6f6f6;
+              border-top: solid var(--primary-dark);
+}
+
+.theme-switcher {
+    position: absolute;
+    top: 23px;
+    right: 17px;
+
+}
+.theme-dark {
+        background: #272727;
+        border-top: solid var(--primary-dark);
+          --primary-dark: #00d4ca;
+          --container-one: #333;
+            --second-container: #131313;
+    --text-highlight:#1d1d1d;
+}
+
+ .theme-switcher svg{color:var(--primary-dark); }
+
+button{border:0px; cursor:pointer;     outline: none;}
+button:focus{border:0px;}
+
+.nav a {
+      color:var(--primary-dark)
+}
+.about a:hover {
+    color: white;
+}
+.about {
+    color: #999;
+    font-size: 23px;
+    font-weight: 100;
+    background: var(--primary);
+    margin: 0px;
+    padding: 73px 24px;
+    margin-bottom: 32px;
+}
+.text-right{
+    text-align:right;
+}
+.skills h1 {
+    width: 100%;
+    padding-left: 20px;
+    color: #fff;
+    /* text-align: center; */
+}
+.clients{ width:80%;}
+.clients span{
+    color:#fff;
+    padding-right:5px;
+    display:inline-block;
+}
+.clients span:nth-child(1){
+    font-size:26px;
+}
+.clients span:nth-child(2){
+    font-size:22px;
+}
+.clients span:nth-child(3){
+    font-size:18px;
+}
+.clients span:nth-child(4){
+    font-size:14px;
+}
+.clients span:nth-child(5){
+    font-size:14px;
+}
+nav{
+    /* margin-left:20px; */
+}
+nav h1 {
+      line-height: 0px;
+}
+header{
+    padding: 16px 0px;
+}
+.align-top{
+       align-self: flex-start;
+}
+
+header nav{
+        position: relative;
+    top: 5px;
+}
+h1 svg {
+      width: 35px!important;
+      height: 29px!important;
+      margin-right: 10px;
+      position: relative;
+      top: 9px;
+}
+  /* .bg-purple{
+    
+    background: #00388c;
+  } */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 5px;
+    align-items: center;
+}
+.icons svg {
+      width: 35px;
+      height: 56px;
+      margin-right: 30px;
+      margin-bottom: 10px;
+}
+.icons-mid svg {
+    width: 25px;
+    height: 45px;
+    margin-right: 30px;
+}
+  /* .skills svg:nth-child(8n) {
+      margin-right: 0px;
+  } */
+.justify-left{
+    justify-content: left;
+}
+h1 {
+      font-size: 18px;
+      background:var(--text-highlight);
+      color: var(--primary-dark);
+      padding: 0px 10px;
+      display:inline-block
+}
+.no-padding{
+    padding:0px!important
+}
+
+li {
+    color: #fff;
+    font-size: 14px;
+    line-height: 29px;
+}
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.contact-me a {
+    color: #000;
+}
+.contact-me a:hover{
+    color:#fff;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 80px;
+}.contact-me {
+    margin-top: 24px;
+    height: 20px;}
+.nav__link {
+    margin-left: 20px;
+}
+
+
+
+footer a:hover{
+    background:transparent;
+}
+
+.about span.link-highlight {
+    line-height: 44px !important;
+    display: inline-block;
+    background: var(--text-highlight);
+    width: auto;
+    font-size: 2.4rem;
+}
+
+
+.type-angular {
+
+    .vue-typer .custom.char {
+        color: #c3002f;
+        background-color: #ccc;
+      }
+}
+
+.type-front {
+
+    .vue-typer .custom.char {
+        color: yellow;
+        background-color: #ccc;
+      }
+}
+
+
+.type-software {
+
+    .vue-typer .custom.char {
+        color: #333;
+        background-color: #ccc;
+      }
+}
+
+.type-react {
+
+    .vue-typer .custom.char {
+        color: #00a8ff;
+        background-color: #ccc;
+      }
+}
+
+
+.type-vue {
+
+    .vue-typer .custom.char {
+        color: green;
+        background-color: #ccc;
+      }
+}

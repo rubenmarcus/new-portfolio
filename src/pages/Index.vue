@@ -1,15 +1,7 @@
 <template>
   <Layout>
-
-        <div class="about mt-80">
-        <div class="container">
-            Hello, I am a   <br />
-         <span class="link-highlight">Software Engineer /  Front-end Specialist</span>
-            <br /><span>from São Paulo, Brazil.</span>
-            <br />
-        </div>
-</div>
-    <div class="stats  justify-right text-right">
+<Open />
+    <div class="stats justify-right text-right">
       <div class="container">
         <div class="d-flex flex-wrap">
           <p>
@@ -47,65 +39,65 @@
             <a class="link-highlight" href="https://rubenmarcus.medium.com/">Medium</a>
           </p>
 
-               <p>
+          <p>
             <span class="number-size">53</span>
             projects done
           </p>
 
-             <p>
+          <p>
             <span class="number-size">~40</span>
-            hours of studying <br/>
-            per week
+            hours of studying
+            <br />per week
           </p>
 
-           <p>
+          <p>
             <span class="number-size">3</span>
             articles translated
             <br />at MDN
           </p>
 
-              <p>
+          <p>
             <span class="number-size">~1 mi</span>
             lines of code tested
             <br />at SonarQube
           </p>
 
-
-              <p>
+          <p>
             <span class="number-size">46</span>
             public repositories
             <br />at Github
           </p>
         </div>
- </div>
-          </div>
-          
-  <div class="container ">
-   <BlogPosts />
-   <StackOverflow />
+      </div>
+    </div>
+
+    <div class="container">
+      <BlogPosts />
+      <StackOverflow />
     </div>
   </Layout>
 </template>
 
 <script>
 import axios from "axios";
-import Skills from '~/components/Skills.vue'
-import Links from '~/components/Links.vue'
-import BlogPosts from '~/components/Blog.vue'
-import StackOverflow from '~/components/StackOverflow.vue'
+import Skills from "~/components/Skills.vue";
+import Open from "~/components/Open.vue";
+import Links from "~/components/Links.vue";
+import BlogPosts from "~/components/Blog.vue";
+import StackOverflow from "~/components/StackOverflow.vue";
 
-var randomColor = "#"+((1<<24)*Math.random()|0).toString(16); 
+var randomColor = "#" + (((1 << 24) * Math.random()) | 0).toString(16);
 
 export default {
-   components: {
+  components: {
+    Open,
     Skills,
     Links,
     BlogPosts,
     StackOverflow
-  }, metaInfo: {
-    title: 'rubenmarcus.dev',
-   
+  },
+  metaInfo: {
+    title: "rubenmarcus.dev"
   }
-
 };
 </script>
