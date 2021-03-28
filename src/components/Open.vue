@@ -1,7 +1,10 @@
     <template>
   <div class="about mt-80">
     <div class="container">
-      Hello, I am a
+      
+      <span v-if="this.$lang == 'en'">   Hello, I am a</span>
+      <span v-if="this.$lang == 'pt-BR'">Olá, eu sou um</span>
+   
       <br />
       <div :class="message">
         <span class="link-highlight">
@@ -31,7 +34,9 @@
              </ClientOnly>
         </span>
       </div>
-      <span>from São Paulo, Brazil.</span>
+      <span v-if="this.$lang == 'en'">from São Paulo, Brazil.</span>
+      <span v-if="this.$lang == 'pt-BR'">de São Paulo, Brasil.</span>
+
       <br />
       <img src="../img/me.jpg" />
     </div>
@@ -53,6 +58,11 @@ export default {
     return {
       message: "type-software"
     };
+  },
+    beforeCreate: function () {
+    console.log(this.$lang, 'lang')
+
+    
   },
   methods: {
     onTyped: function(typedString) {

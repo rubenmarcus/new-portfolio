@@ -86,9 +86,10 @@ import Links from "~/components/Links.vue";
 import BlogPosts from "~/components/Blog.vue";
 import StackOverflow from "~/components/StackOverflow.vue";
 
-var randomColor = "#" + (((1 << 24) * Math.random()) | 0).toString(16);
+
 
 export default {
+
   components: {
     Open,
     Skills,

@@ -14,8 +14,8 @@
               <a href>contact</a>
             </nav>
           </div>
-
-          <theme-switcher :theme="theme" @themeChanged="updateTheme" />
+          <theme-switcher  :theme="theme" @themeChanged="updateTheme" />
+          <lang-switcher  :lang="language" @langChanged="updateLang" />
         </div>
       </header>
       <slot />
@@ -176,25 +176,38 @@
 
 <script>
 import ThemeSwitcher from "../components/ThemeSwitcher";
+import LangSwitcher from "../components/LangSwitcher";
+
 
 let themeClass;
 let theme;
+let language;
+
 export default {
   components: {
-    ThemeSwitcher
+    ThemeSwitcher,
+    LangSwitcher
   },
+
   mounted() {
-    this.theme = localStorage.getItem("theme") || "theme-light";
+    this.theme =  "theme-light";
+    
   },
   data() {
     return {
-      theme: ""
+      theme: "",
+      language: this.$lang
     };
   },
   methods: {
 
     updateTheme(theme) {
       this.theme = theme;
+    },
+      updateLang(lang) {
+      this.language = lang;
+      this.$lang = lang
+      console.log(this.$lang, 'language update', lang)
     },
   }
 };

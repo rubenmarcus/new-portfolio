@@ -426,7 +426,7 @@ footer a:hover{
 
     .vue-typer .custom.char {
         color: #c3002f;
-        background-color: #ccc;
+        background-color:var(--text-highlight);
       }
 }
 
@@ -434,7 +434,7 @@ footer a:hover{
 
     .vue-typer .custom.char {
         color: yellow;
-        background-color: #ccc;
+        background-color:var(--text-highlight);
       }
 }
 
@@ -443,7 +443,7 @@ footer a:hover{
 
     .vue-typer .custom.char {
         color: #333;
-        background-color: #ccc;
+        background-color:var(--text-highlight);
       }
 }
 
@@ -451,7 +451,7 @@ footer a:hover{
 
     .vue-typer .custom.char {
         color: #00a8ff;
-        background-color: #ccc;
+        background-color:var(--text-highlight);
       }
 }
 
@@ -460,6 +460,6 @@ footer a:hover{
 
     .vue-typer .custom.char {
         color: green;
-        background-color: #ccc;
+        background-color:var(--text-highlight);
       }
 }
