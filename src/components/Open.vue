@@ -5,6 +5,7 @@
       <br />
       <div :class="message">
         <span class="link-highlight">
+               <ClientOnly>
           <vue-typer
             :text='[
       "software engineer",
@@ -25,6 +26,9 @@
             caret-animation="blink"
             @typed="onTyped"
           ></vue-typer>
+
+
+             </ClientOnly>
         </span>
       </div>
       <span>from São Paulo, Brazil.</span>
@@ -36,15 +40,12 @@
 
 
     <script>
-import { VueTyper } from "vue-typer";
+
 
 let message;
 
 export default {
   name: "Open",
-  components: {
-    VueTyper
-  },
   mounted() {
     this.message = "";
   },
@@ -56,8 +57,6 @@ export default {
   methods: {
     onTyped: function(typedString) {
       // handle typed string
-
-      console.log(typedString, "typed");
 
       setTimeout(() => {
         switch (typedString) {
@@ -80,33 +79,5 @@ export default {
       }, 2400);
     }
   },
-  created() {
-    // setInterval(() => {    for (i = 0; i < arrayClass.length; i++) {    this.message = arrayClass[i];  console.log('message', this.message, arrayClass[i]);  }}, 5000);
-    // var i = -1;
-    // console.log(arrayClass.length);
-    // const call = () => {
-    //   i++;
-    //   console.log(arrayClass[i], i);
-    //   self.message = arrayClass[i];
-    //   if (i == arrayClass.length - 1) {
-    //     i = -1;
-    //     clearInterval();
-    //   }
-    // };
-    // setInterval(call, 2500);
-    //         for (i = 0; i < arrayClass.length; i) {
-    //      setInterval(function(){
-    //             //  self.message = arrayClass[i]
-    //               console.log (i, arrayClass[i]);
-    //                 i++
-    // }, 1500);   }
-    //   arrayClass.forEach(cssClass => {
-    //         setInterval(() => {
-    //             console.log(cssClass, 'ss')
-    //             setTimeout(() => {    this.message = cssClass }, 5300)
-    //             console.log('message', this.message, arrayClass[cssClass])
-    //         }, 300);
-    // });
-  }
 };
 </script>
