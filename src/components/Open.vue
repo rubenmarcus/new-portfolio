@@ -2,8 +2,7 @@
   <div class="about mt-80">
     <div class="container">
       
-      <span v-if="this.$lang == 'en'">   Hello, I am a</span>
-      <span v-if="this.$lang == 'pt-BR'">Olá, eu sou um</span>
+      <span>Olá, eu sou um</span>
    
       <br />
       <div :class="message">
@@ -34,8 +33,8 @@
              </ClientOnly>
         </span>
       </div>
-      <span v-if="this.$lang == 'en'">from São Paulo, Brazil.</span>
-      <span v-if="this.$lang == 'pt-BR'">de São Paulo, Brasil.</span>
+
+      <span>de São Paulo, Brasil.</span>
 
       <br />
       <img src="../img/me.jpg" />
@@ -58,11 +57,6 @@ export default {
     return {
       message: "type-software"
     };
-  },
-    beforeCreate: function () {
-    console.log(this.$lang, 'lang')
-
-    
   },
   methods: {
     onTyped: function(typedString) {

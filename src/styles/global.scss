@@ -5,8 +5,13 @@
 @import 'layout.scss';
 
 
+.en .lang-switcher a:first-child{
+    display:none;
+}
 
-
+.pt-BR .lang-switcher a:last-child{
+    display:none;
+}
 :root {
     --primary-dark:#ccc;
     --white: #ffffff;

@@ -191,12 +191,12 @@ export default {
 
   mounted() {
     this.theme =  "theme-light";
-    
+      console.log(this.language, 'language')
   },
   data() {
     return {
       theme: "",
-      language: this.$lang
+      language: 'pt-BR'
     };
   },
   methods: {
@@ -206,8 +206,7 @@ export default {
     },
       updateLang(lang) {
       this.language = lang;
-      this.$lang = lang
-      console.log(this.$lang, 'language update', lang)
+      console.log('language update', language)
     },
   }
 };
