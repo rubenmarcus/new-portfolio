@@ -15,7 +15,7 @@
             </nav>
           </div>
           <theme-switcher  :theme="theme" @themeChanged="updateTheme" />
-          <lang-switcher  :lang="language" @langChanged="updateLang" />
+          <lang-switcher/>
         </div>
       </header>
       <slot />
@@ -204,10 +204,7 @@ export default {
     updateTheme(theme) {
       this.theme = theme;
     },
-      updateLang(lang) {
-      this.language = lang;
-      console.log('language update', language)
-    },
+     
   }
 };
 </script>

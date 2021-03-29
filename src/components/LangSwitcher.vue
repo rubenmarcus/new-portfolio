@@ -1,8 +1,8 @@
 <template>
-  <a href="#" class="lang-switcher">
+  <div href="#" class="lang-switcher">
       <g-link  to="/en">EN</g-link>
       <g-link to="/">PT-BR</g-link>
-</a>
+</div>
 </template>
 
 <script>
