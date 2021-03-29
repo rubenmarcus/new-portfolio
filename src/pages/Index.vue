@@ -97,6 +97,17 @@ export default {
     BlogPosts,
     StackOverflow
   },
+    watch: {
+    $route(to, from) {
+       console.log(to, from, 'route')
+    },
+   },
+    beforeRouteUpdate(to, from, next) {
+    // react to route changes...
+    // don't forget to call next()
+         console.log(to, from, 'route')
+    next();
+  },
   metaInfo: {
     title: "rubenmarcus.dev"
   }

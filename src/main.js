@@ -6,15 +6,14 @@ export default function (Vue, { head }) {
     const VueTyper = require('vue-typer').default;
     Vue.use(VueTyper);
     const isPt = checkLanguage()
-    console.log(!whatPath())
+    console.log(!whatPath(), whatPath ,  Vue.router)
     if(isPt && !whatPath()){
       head.htmlAttrs = { lang: "pt-BR"}
-      document.documentElement.classList.add('pt-BR')
+      document.getElementById('app').classList.add('pt-BR')
     } else {
-      window.location.pathname == 'en'
       head.htmlAttrs = { lang: "en"}
-      document.documentElement.classList.add('en')
-
+      document.getElementById('app').classList.remove('pt-BR')
+      // document.documentElement.classList.add('en')
     }
 }
   Vue.component('Layout', DefaultLayout)

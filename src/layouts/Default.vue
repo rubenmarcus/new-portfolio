@@ -1,5 +1,5 @@
 <template>
-  <div :class="theme">
+  <div :class="theme + ' ' + language">
       <header>
         <div class="container justify-left">
           <div class="d-flex justify-right">
@@ -191,20 +191,44 @@ export default {
 
   mounted() {
     this.theme =  "theme-light";
-      console.log(this.language, 'language')
+    
+     this.language = this.checkRoute();
+      console.log(this.language, 'language',)
+
   },
   data() {
     return {
       theme: "",
-      language: 'pt-BR'
+      language:'',
     };
   },
+   watch: {
+    $route(to, from) {
+       console.log(to, from, 'route')
+    },
+   },
+    beforeRouteUpdate(to, from, next) {
+    // react to route changes...
+    // don't forget to call next()
+         console.log(to, from, 'route')
+    next();
+  },
   methods: {
-
+    checkRoute() {
+        if(process.isClient) {
+          console.log(window.location.pathname)
+          if(window.location.pathname == '/en') {
+             return 'en'
+          } else {
+                  return 'pt-BR'
+          }
+              
+        }
+    },
     updateTheme(theme) {
       this.theme = theme;
     },
-     
+   
   }
 };
 </script>
