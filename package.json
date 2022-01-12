@@ -14,7 +14,7 @@
     "axios": "^0.19.2",
     "gh-pages": "^2.1.1",
     "gridsome": "^0.7.0",
-    "markdown-it": "^10.0.0",
+    "markdown-it": "^12.3.2",
     "serialize-javascript": ">=2.1.1"
   }
 }
